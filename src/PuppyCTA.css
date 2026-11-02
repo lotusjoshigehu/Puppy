@@ -1,0 +1,362 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&display=swap');
+
+/* Main CTA Section */
+.puppy-cta-section {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  padding: 18px 20px 65px;
+  color: #fff8ed;
+  background: radial-gradient(
+    ellipse at 50% 42%,
+    #321a10 0%,
+    #241109 72%
+  );
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Content */
+.puppy-cta-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Main Heading */
+.puppy-cta-content h2 {
+  margin: 0 auto 14px;
+  color: #fffaf2;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 76px);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -2.5px;
+}
+
+/* Description */
+.puppy-cta-content > p {
+  max-width: 530px;
+  margin: 18px auto 46px;
+  color: #ead9cb;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Door Scene */
+.puppy-cta-scene {
+  position: relative;
+  width: min(560px, 100%);
+  height: 335px;
+  margin: 0 auto 22px;
+}
+
+/* Wooden Wall */
+.puppy-cta-wall {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  height: 305px;
+  border-radius: 16px 16px 0 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 24px,
+      rgba(31, 13, 6, 0.38) 25px 27px
+    ),
+    linear-gradient(
+      90deg,
+      #5a321e,
+      #704027 50%,
+      #58301c
+    );
+  box-shadow: inset 0 0 28px rgba(25, 9, 3, 0.25);
+}
+
+/* Doorway */
+.puppy-cta-doorway {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 178px;
+  height: 274px;
+  transform: translateX(-50%);
+}
+
+/* Door Frame */
+.puppy-cta-frame {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  border: 7px solid #24140d;
+  border-radius: 92px 92px 0 0;
+  background: #a95722;
+  box-shadow:
+    0 0 0 3px #d18a43,
+    0 0 25px rgba(255, 194, 105, 0.22);
+}
+
+/* Puppy Image Behind Doors */
+.puppy-cta-puppy {
+  position: absolute;
+  inset: 7px 7px 0;
+  overflow: hidden;
+  border-radius: 78px 78px 0 0;
+  background: #f1c47c;
+}
+
+.puppy-cta-puppy img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Single Door */
+/* Single Door - Outer and Inner Faces */
+.puppy-cta-door {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid #24140d;
+  border-radius: 85px 85px 0 0;
+
+  background: linear-gradient(90deg, #b75b21, #963e17);
+
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+
+  animation: open-single-door 1.5s ease-in-out 0.4s 1 both;
+}
+
+/* Inner Side of Door */
+.puppy-cta-door::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #6b3218;
+  border-radius: 80px 80px 0 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 35px,
+      rgba(70, 30, 12, 0.2) 36px 38px
+    ),
+    linear-gradient(90deg, #d58a4c, #a95722);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+/* Door Window */
+.puppy-cta-door::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 38px;
+  left: 50%;
+  width: 35px;
+  height: 65px;
+  border: 2px solid #32190e;
+  border-radius: 50%;
+  background: #ffd17b;
+  transform: translateX(-50%);
+}
+
+/* Door Handle */
+.puppy-cta-door span {
+  position: absolute;
+  z-index: 3;
+  right: 12px;
+  top: 58%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #32190e;
+  border-radius: 50%;
+  background: #ffd17b;
+}
+
+/* Opening Animation */
+@keyframes open-single-door {
+  from {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateY(-95deg);
+  }
+}
+
+/* Wall Light */
+.puppy-cta-light {
+  position: absolute;
+  z-index: 3;
+  right: -48px;
+  top: 66px;
+  width: 21px;
+  height: 31px;
+  border: 3px solid #2a170e;
+  border-radius: 8px 8px 13px 13px;
+  background: #ffd17b;
+  box-shadow: 0 0 20px rgba(255, 197, 103, 0.4);
+}
+
+/* Plant Pot */
+.puppy-cta-plant {
+  position: absolute;
+  z-index: 3;
+  right: -75px;
+  bottom: 0;
+  width: 56px;
+  height: 75px;
+  border-bottom: 38px solid #b85f2b;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.puppy-cta-plant i {
+  position: absolute;
+  bottom: 35px;
+  left: 2px;
+  width: 36px;
+  height: 49px;
+  border-radius: 70% 10% 70% 10%;
+  background: #6c9e51;
+  transform: rotate(-35deg);
+}
+
+.puppy-cta-plant i + i {
+  left: 19px;
+  transform: rotate(35deg) scaleX(-1);
+}
+
+/* Welcome Home Sign */
+.puppy-cta-welcome {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: 0;
+  width: 165px;
+  padding: 5px 8px;
+  border: 3px solid #3b2113;
+  border-radius: 7px;
+  background: repeating-linear-gradient(
+    90deg,
+    #f3bd62 0 12px,
+    #e6a74c 13px 20px
+  );
+  color: #32190e;
+  font: 700 13px "DM Sans", sans-serif;
+  transform: translateX(-50%);
+}
+
+/* Floor */
+.puppy-cta-floor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 27px;
+  border-radius: 4px;
+  background: #3a2115;
+  transform: translateY(2px);
+}
+
+/* CTA Buttons */
+.puppy-cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.puppy-cta-actions a {
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 0 21px;
+  border: 2px solid #fff4e6;
+  border-radius: 28px;
+  color: #fffaf2;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.puppy-cta-actions a:hover {
+  transform: translateY(-3px);
+}
+
+.puppy-cta-actions .puppy-cta-whatsapp {
+  border-color: #168553;
+  background: #168553;
+}
+
+.puppy-cta-actions .puppy-cta-contact {
+  background: transparent;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .puppy-cta-section {
+    padding: 42px 16px 50px;
+  }
+
+  .puppy-cta-content h2 {
+    font-size: 43px;
+    letter-spacing: -1.5px;
+  }
+
+  .puppy-cta-content > p {
+    margin: 15px auto 35px;
+    font-size: 14px;
+  }
+
+  .puppy-cta-scene {
+    height: 300px;
+    max-width: 390px;
+  }
+
+  .puppy-cta-wall {
+    height: 270px;
+    left: 0;
+    right: 0;
+  }
+
+  .puppy-cta-doorway {
+    transform: translateX(-50%) scale(0.88);
+    transform-origin: bottom center;
+  }
+
+  .puppy-cta-plant {
+    right: -55px;
+  }
+
+  .puppy-cta-light {
+    right: -34px;
+  }
+}
+
+/* Accessibility */
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .puppy-cta-door {
+    animation: none;
+    transform: none;
+  }
+
+  .puppy-cta-actions a {
+    transition: none;
+  }
+}

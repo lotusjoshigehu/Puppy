@@ -1,0 +1,1978 @@
+
+/* =========================
+   GLOBAL DESIGN VARIABLES
+========================= */
+
+:root {
+  --brown: #301609;
+  --caramel: #a94b19;
+  --cream: #fff4e2;
+  --gold: #f5c16c;
+  --green: #198653;
+  --white: #fffdf8;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 80px;
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 24px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 4px solid #d18a3e;
+  border-radius: 50%;
+  font-size: 25px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--brown);
+  font-size: 15px;
+  font-weight: 700;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--caramel);
+}
+
+.whatsapp-btn {
+  background: var(--green);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 5px 0 var(--brown);
+  transition: transform 0.2s;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 640px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #fffdf8 0%,
+    #fff9ef 38%,
+    #fff1d8 72%,
+    #ffe3b5 100%
+  );
+  text-align: center;
+  padding: 30px 20px 0;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.tagline {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--caramel);
+  margin-bottom: 18px;
+  transform: rotate(-2deg);
+  border-bottom: 2px solid var(--caramel);
+  padding-bottom: 5px;
+}
+
+.hero h1 {
+  font-family: "Fraunces", Georgia, serif;
+  color: var(--brown);
+  font-size: clamp(42px, 5.4vw, 78px);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -2.5px;
+  margin: 0 0 20px;
+}
+
+.hero-description {
+  color: #76523e;
+  font-size: 19px;
+  line-height: 1.55;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 54px;
+  padding: 13px 25px;
+  border: 2px solid var(--brown);
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 800;
+  transition: transform 0.2s ease;
+}
+
+.primary-btn {
+  background: var(--caramel);
+  color: white;
+  border-color: var(--caramel);
+  box-shadow: 0 5px 0 var(--brown);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--brown);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   DECORATIVE PAW PRINTS
+========================= */
+
+.paw {
+  position: absolute;
+  opacity: 0.4;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.paw-one {
+  top: 35px;
+  left: 4%;
+  transform: rotate(-25deg);
+}
+
+.paw-two {
+  top: 95px;
+  left: 12%;
+  transform: rotate(15deg);
+}
+
+.paw-three {
+  top: 145px;
+  left: 22%;
+  transform: rotate(-15deg);
+}
+
+.paw-four {
+  top: 65px;
+  right: 15%;
+  transform: rotate(20deg);
+}
+
+/* =========================
+   HERO PUPPY GALLERY
+========================= */
+
+.hero-gallery {
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  width: 100%;
+  height: 205px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 0 4%;
+  z-index: 2;
+}
+
+.hero-photo {
+  width: 155px;
+  height: 155px;
+  border: 3px solid var(--brown);
+  border-radius: 100px 100px 0 0;
+  overflow: hidden;
+  background: #e9b76e;
+  flex-shrink: 0;
+  box-shadow: 0 5px 10px #30160915;
+  transition: transform 0.3s ease;
+}
+
+.hero-photo:hover {
+  transform: translateY(-10px);
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-1 {
+  height: 145px;
+}
+
+.photo-2 {
+  height: 195px;
+  width: 170px;
+}
+
+.photo-3 {
+  height: 165px;
+}
+
+.photo-4 {
+  height: 175px;
+}
+
+.photo-5 {
+  height: 195px;
+  width: 170px;
+}
+
+.photo-6 {
+  height: 145px;
+}
+
+/* =========================
+   DECORATIVE BOTTOM CLOUD
+========================= */
+
+.hero-cloud {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: var(--cream);
+  z-index: 3;
+}
+
+.hero-cloud::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background:
+    radial-gradient(
+      circle at 20px 20px,
+      var(--cream) 21px,
+      transparent 22px
+    ) 0 0 / 45px 35px repeat-x;
+}
+
+.cloud-pattern {
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 30px,
+      #bd956b 31px,
+      transparent 33px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0,
+      transparent 30px,
+      #bd956b 31px,
+      transparent 33px
+    );
+}
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 0 3%;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .hero-photo {
+    width: 125px;
+  }
+
+  .photo-2,
+  .photo-5 {
+    width: 140px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 800px) {
+  .navbar {
+    height: 75px;
+    padding: 0 20px;
+  }
+
+  .menu-btn {
+    display: block;
+    color: var(--brown);
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 20px #30160920;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .whatsapp-btn {
+    display: none;
+  }
+
+  .hero {
+    min-height: 650px;
+    padding-top: 45px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 7vw, 55px);
+    letter-spacing: -1.5px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .tagline {
+    font-size: 21px;
+  }
+
+  .hero-gallery {
+    gap: 10px;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .hero-photo {
+    width: 100px;
+    height: 130px;
+  }
+
+  .photo-2,
+  .photo-5 {
+    width: 110px;
+    height: 160px;
+  }
+
+  .photo-3,
+  .photo-4 {
+    height: 140px;
+  }
+
+  .photo-1,
+  .photo-6 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 21px;
+  }
+
+  .brand-logo {
+    width: 43px;
+    height: 43px;
+  }
+
+  .hero {
+    min-height: 690px;
+    padding: 35px 14px 0;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1.05;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+
+  .hero-gallery {
+    height: 155px;
+    bottom: 55px;
+    gap: 8px;
+  }
+
+  .hero-photo {
+    width: 80px;
+    height: 110px;
+  }
+
+  .photo-2,
+  .photo-5 {
+    width: 90px;
+    height: 145px;
+  }
+
+  .photo-3,
+  .photo-4 {
+    height: 120px;
+  }
+
+  .hero-cloud {
+    height: 55px;
+  }
+}
+
+
+/* Original TeddyPups brown paw navigation indicator */
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-paw {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 50%;
+  bottom: -19px;
+  transform: translateX(-50%);
+  color: #984518;
+  fill: #984518;
+  stroke: #984518;
+  stroke-width: 2.5px;
+}
+
+.nav-links a.active-link {
+  color: #a94b19;
+}
+
+/* Keep paw correctly positioned on mobile */
+
+@media (max-width: 800px) {
+  .nav-paw {
+    bottom: -16px;
+  }
+}
+
+
+/* Custom TeddyPups brown paw mouse cursor */
+
+* {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='%23944818' stroke='%23301609' stroke-width='1'%3E%3Cellipse cx='16' cy='20' rx='7' ry='6'/%3E%3Cellipse cx='7' cy='12' rx='3.2' ry='4' transform='rotate(-25 7 12)'/%3E%3Cellipse cx='14' cy='7' rx='3.2' ry='4'/%3E%3Cellipse cx='22' cy='8' rx='3.2' ry='4' transform='rotate(15 22 8)'/%3E%3Cellipse cx='27' cy='14' rx='3' ry='4' transform='rotate(25 27 14)'/%3E%3C/g%3E%3C/svg%3E") 16 16, auto !important;
+}
+
+
+/* puppy section */
+
+/* =====================================
+   PUPPY HORIZONTAL KENNEL GALLERY
+===================================== */
+
+/* =====================================
+   MEET THE PUPS SECTION
+===================================== */
+
+.puppy-section {
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+  padding: 55px 3.5% 100px;
+  background: linear-gradient(
+    180deg,
+    #fff0d5 0%,
+    #ffedcf 75%,
+    #f9dcae 100%
+  );
+}
+
+/* =====================================
+   HEADING AND BUTTON
+===================================== */
+
+.puppy-heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 38px;
+  position: relative;
+  z-index: 2;
+}
+
+.puppy-heading h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(65px, 6vw, 90px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -3px;
+  color: #301609;
+  margin: 0;
+}
+
+.puppy-heading p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #76523e;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.puppy-all-btn {
+  flex-shrink: 0;
+  background: #a94b19;
+  color: white;
+  padding: 17px 28px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 6px 0 #301609;
+  transition: transform 0.2s ease;
+}
+
+.puppy-all-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* =====================================
+   HORIZONTAL PUPPY SCROLL
+===================================== */
+
+.puppy-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 12px 0 25px;
+  position: relative;
+  z-index: 2;
+  scrollbar-width: thin;
+  scrollbar-color: #a94b19 #f5d8ac;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.puppy-scroll::-webkit-scrollbar {
+  height: 9px;
+}
+
+.puppy-scroll::-webkit-scrollbar-track {
+  background: #f5d8ac;
+  border-radius: 20px;
+}
+
+.puppy-scroll::-webkit-scrollbar-thumb {
+  background: #a94b19;
+  border-radius: 20px;
+}
+
+.puppy-cards {
+  display: flex;
+  align-items: flex-end;
+  gap: 65px;
+  width: max-content;
+  padding: 0 45px;
+}
+
+.puppy-card {
+  width: 225px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.puppy-card h3 {
+  min-height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 29px;
+  line-height: 1.05;
+  color: #301609;
+  margin-bottom: 8px;
+}
+
+.puppy-details {
+  min-height: 48px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #76523e;
+  margin-bottom: 12px;
+}
+
+/* =====================================
+   KENNEL FRAME
+===================================== */
+
+.kennel {
+  height: 250px;
+  width: 195px;
+  margin: auto;
+  position: relative;
+  perspective: 1000px;
+  overflow: visible;
+  border: 3px solid #301609;
+  border-radius: 110px 110px 0 0;
+  background: var(--door-color);
+  isolation: isolate;
+}
+
+.kennel-inside {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 105px 105px 0 0;
+  background: #f1c17d;
+}
+
+.kennel-inside img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.puppy-view-btn {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff8eb;
+  color: #301609;
+  border: 2px solid #301609;
+  border-radius: 25px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* =====================================
+   WOODEN DOOR PANELS
+===================================== */
+
+/* =====================================
+   SINGLE WOODEN KENNEL DOOR
+===================================== */
+
+.door-single {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 105px 105px 0 0;
+  background: var(--door-color);
+  cursor: inherit;
+  z-index: 3;
+
+  transform-origin: left center;
+  transform: rotateY(0deg);
+
+  transition:
+    transform 1s cubic-bezier(.2,.8,.2,1);
+
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Wooden decorative border */
+
+.door-single::before {
+  content: "";
+  position: absolute;
+  inset: 28px 25px 15px;
+  border: 2px solid #ffffff50;
+  border-radius: 90px 90px 0 0;
+  pointer-events: none;
+}
+
+/* Wooden texture */
+
+.door-single::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 45px,
+    #30160912 46px,
+    transparent 48px
+  );
+  pointer-events: none;
+}
+
+/* Brown paw */
+
+.door-single .door-paw {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  z-index: 2;
+}
+
+/* Golden handle */
+
+.door-single .door-handle {
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #f5bd65;
+  border: 2px solid #301609;
+  z-index: 4;
+}
+
+/* Door swings outward to the left */
+
+.kennel.door-open .door-single {
+  transform: rotateY(110deg);
+  box-shadow: 5px 5px 12px #30160930;
+}
+
+
+
+
+/* =====================================
+   AVAILABLE LABEL
+===================================== */
+
+.availability {
+  position: absolute;
+  top: 35px;
+  right: -17px;
+  z-index: 6;
+  background: #fffaf0;
+  color: #301609;
+  border: 2px solid #301609;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  transform: rotate(8deg);
+  white-space: nowrap;
+}
+
+/* Click hint */
+
+.door-hint {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  color: white;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow: 1px 1px 3px #301609;
+}
+
+/* =====================================
+   PUPPY ENQUIRY BUTTON
+===================================== */
+
+.puppy-enquire {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #fff7e9;
+  border: 1px solid #a94b19;
+  border-radius: 25px;
+  color: #8b421c;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* =====================================
+   WOODEN FLOOR
+===================================== */
+
+.wooden-floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 95px;
+  background: #dfa45d;
+  border-top: 6px solid #694022;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.wood-lines {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 150px,
+    #9a633d55 151px,
+    #9a633d55 153px
+  );
+}
+
+/* =====================================
+   PUPPY MASCOT
+===================================== */
+
+.puppy-mascot {
+  position: absolute;
+  left: 14%;
+  bottom: 55px;
+  z-index: 5;
+  font-size: 75px;
+  pointer-events: none;
+}
+
+/* =====================================
+   TABLET RESPONSIVENESS
+===================================== */
+
+@media (max-width: 1000px) {
+  .puppy-heading h2 {
+    font-size: 58px;
+  }
+
+  .puppy-cards {
+    gap: 45px;
+  }
+}
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 650px) {
+  .puppy-section {
+    padding: 40px 18px 130px;
+  }
+
+  .puppy-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .puppy-heading h2 {
+    font-size: 48px;
+    letter-spacing: -1.5px;
+  }
+
+  .puppy-heading p {
+    font-size: 16px;
+  }
+
+  .puppy-all-btn {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+
+  .puppy-cards {
+    gap: 35px;
+    padding: 0 20px;
+  }
+
+  .puppy-card {
+    width: 190px;
+  }
+
+  .puppy-card h3 {
+    font-size: 23px;
+  }
+
+  .puppy-details {
+    font-size: 13px;
+  }
+
+  .kennel {
+    width: 165px;
+    height: 220px;
+  }
+
+  .puppy-mascot {
+    font-size: 48px;
+    left: 5%;
+  }
+
+  .wooden-floor {
+    height: 65px;
+  }
+}
+
+
+/* Hide puppy section horizontal scrollbar */
+.puppy-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.puppy-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =================================
+   PUPPY DETAIL PAGE
+================================= */
+
+.puppy-detail-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px 5.5%;
+  background: #f5f0e8;
+  color: #321b10;
+  box-sizing: border-box;
+}
+
+.detail-back-btn,
+.detail-back-bottom {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #593b2b;
+  border-radius: 30px;
+  background: #fffaf3;
+  color: #321b10;
+  padding: 11px 20px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  cursor: pointer;
+}
+
+.puppy-detail-top {
+  display: grid;
+  grid-template-columns: 1.35fr 0.95fr;
+  gap: 35px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+.puppy-detail-photo {
+  height: 620px;
+  overflow: hidden;
+  border: 3px solid #321b10;
+  border-radius: 24px;
+  background: #e8d6bc;
+}
+
+.puppy-detail-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.puppy-detail-info {
+  position: relative;
+  align-self: center;
+  background: #fffdf8;
+  border: 2px solid #321b10;
+  border-radius: 25px;
+  padding: 35px 30px;
+  box-shadow: 7px 7px 0 #321b1020;
+}
+
+.detail-available {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #ffe6b7;
+  color: #8a431c;
+  border-radius: 30px;
+  padding: 8px 13px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.puppy-detail-info h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.05;
+  margin: 18px 0 25px;
+  color: #321b10;
+}
+
+.detail-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 20px;
+  margin-bottom: 28px;
+}
+
+.detail-facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail-facts span {
+  font-size: 13px;
+  color: #866c59;
+}
+
+.detail-facts strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.detail-whatsapp-btn,
+.detail-enquiry-btn {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.detail-whatsapp-btn {
+  background: #188454;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 0 #321b10;
+  margin-bottom: 14px;
+}
+
+.detail-enquiry-btn {
+  background: transparent;
+  color: #321b10;
+  border: 2px solid #321b10;
+}
+
+/* BENEFITS */
+
+
+/* WHAT COMES WITH YOUR PUPPY */
+
+/* Benefits card - right aligned with slight tilt */
+
+.puppy-benefits {
+  width: 65%;
+  max-width: 850px;
+  box-sizing: border-box;
+
+  margin: 35px 3% 45px auto;
+  padding: 28px;
+
+  background-color: #fffaf2;
+  background-image:
+    radial-gradient(circle at 0 0, transparent 19px, #f1dfc9 20px, transparent 21px),
+    radial-gradient(circle at 20px 20px, transparent 19px, #f1dfc9 20px, transparent 21px);
+  background-size: 40px 40px;
+
+  border: 2px solid #493023;
+  border-radius: 20px;
+
+  box-shadow: 4px 5px 0 #321b101c;
+
+  transform: rotate(-1deg);
+  transform-origin: center;
+}
+
+@media (max-width: 700px) {
+  .puppy-benefits {
+    width: 95%;
+    margin: 30px auto;
+    transform: rotate(-0.4deg);
+  }
+}
+
+/* JOURNEY */
+
+.puppy-journey {
+  padding: 40px 0;
+}
+
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.journey-step {
+  position: relative;
+}
+
+.journey-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border: 2px solid #321b10;
+  border-radius: 50%;
+  background: #fffdf8;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.journey-step h3 {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  margin: 17px 0 8px;
+}
+
+.journey-step p {
+  color: #755b49;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ENQUIRY FORM */
+
+.puppy-enquiry-section {
+  display: grid;
+  grid-template-columns: 0.85fr 1.5fr;
+  gap: 40px;
+  background: #fffdf8;
+  border: 2px solid #493023;
+  border-radius: 24px;
+  padding: 38px;
+  margin: 35px 0;
+  box-shadow: 7px 7px 0 #321b101c;
+  scroll-margin-top: 25px;
+}
+
+.enquiry-intro h2 {
+  font-size: clamp(38px, 4vw, 55px);
+  line-height: 0.98;
+  margin-top: 15px;
+}
+
+.enquiry-intro p {
+  color: #806854;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.puppy-enquiry-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 16px;
+}
+
+.puppy-enquiry-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #593d2d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.puppy-enquiry-form input,
+.puppy-enquiry-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid #8b796c;
+  border-radius: 12px;
+  background: #fffefa;
+  padding: 12px 14px;
+  color: #321b10;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.puppy-enquiry-form input:focus,
+.puppy-enquiry-form textarea:focus {
+  border-color: #a84f20;
+}
+
+.puppy-enquiry-form small {
+  color: #947d6b;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.enquiry-message {
+  grid-column: 1 / -1;
+}
+
+.puppy-enquiry-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.enquiry-submit-btn {
+  grid-column: 1 / -1;
+  justify-self: start;
+  background: #a94b19;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.detail-back-bottom {
+  margin-top: 20px;
+}
+
+/* CLICKABLE PUPPY CARDS */
+
+.puppy-card {
+  cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+  .puppy-detail-top {
+    grid-template-columns: 1fr;
+  }
+
+  .puppy-detail-photo {
+    height: 480px;
+  }
+
+  .journey-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .puppy-enquiry-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .puppy-detail-page {
+    padding: 20px 15px;
+  }
+
+  .puppy-detail-photo {
+    height: 350px;
+  }
+
+  .puppy-detail-info {
+    padding: 25px 20px;
+  }
+
+  .puppy-detail-info h1 {
+    font-size: 36px;
+  }
+
+  .detail-facts {
+    gap: 18px 10px;
+  }
+
+  .journey-steps {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .puppy-enquiry-section {
+    padding: 23px 18px;
+  }
+
+  .puppy-enquiry-form {
+    grid-template-columns: 1fr;
+  }
+
+  .enquiry-message,
+  .enquiry-submit-btn {
+    grid-column: auto;
+  }
+}
+
+/* =====================================================
+   FINAL PUPPY DETAIL LAYOUT
+   Photo on the left; details + benefits stacked on right
+   ===================================================== */
+
+.puppy-detail-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.95fr);
+  align-items: start;
+  gap: 35px;
+  margin-bottom: 55px;
+}
+
+.puppy-detail-photo {
+  width: 100%;
+  height: 620px;
+  min-width: 0;
+  overflow: hidden;
+  border: 3px solid #321b10;
+  border-radius: 24px;
+  background: #e8d6bc;
+  box-sizing: border-box;
+}
+
+.puppy-detail-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.puppy-detail-right {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 25px;
+  min-width: 0;
+}
+
+.puppy-detail-right .puppy-detail-info {
+  width: 100%;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+.puppy-detail-right .puppy-benefits {
+  width: calc(100% - 6px);
+  max-width: none;
+  box-sizing: border-box;
+  margin: 0 3px 0 3px;
+  padding: 25px;
+  background-color: #fffaf2;
+  background-image:
+    radial-gradient(circle at 0 0, transparent 19px, #f1dfc9 20px, transparent 21px),
+    radial-gradient(circle at 20px 20px, transparent 19px, #f1dfc9 20px, transparent 21px);
+  background-size: 40px 40px;
+  border: 2px solid #493023;
+  border-radius: 20px;
+  box-shadow: 4px 5px 0 #321b101c;
+  transform: rotate(-1deg);
+  transform-origin: center;
+}
+
+.puppy-detail-right .puppy-benefits .detail-step-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a84f20;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.puppy-detail-right .puppy-benefits .detail-step-label span {
+  width: 29px;
+  height: 29px;
+  flex: 0 0 29px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #a84f20;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.puppy-detail-right .puppy-benefits h2 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  color: #321b10;
+  margin: 8px 0 16px;
+}
+
+.puppy-detail-right .puppy-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.puppy-detail-right .puppy-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  color: #493023;
+  font-size: 14px;
+}
+
+.puppy-detail-right .puppy-benefits li svg {
+  width: 18px;
+  height: 18px;
+  color: #b85b24;
+  stroke-width: 3;
+  flex: 0 0 18px;
+}
+
+/* Tablet and mobile: stack the photo and right column */
+@media (max-width: 900px) {
+  .puppy-detail-top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .puppy-detail-photo {
+    height: 480px;
+  }
+
+  .puppy-detail-right {
+    width: 100%;
+  }
+
+  .puppy-detail-right .puppy-benefits {
+    width: calc(100% - 6px);
+    margin: 0 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  .puppy-detail-photo {
+    height: 350px;
+  }
+
+  .puppy-detail-right .puppy-detail-info {
+    padding: 25px 20px;
+  }
+
+  .puppy-detail-right .puppy-benefits {
+    padding: 20px;
+    transform: rotate(-0.4deg);
+  }
+
+  .puppy-detail-right .puppy-benefits h2 {
+    font-size: 23px;
+  }
+}
+
+
+
+
+/* RIGHT COLUMN: PUPPY DETAILS + BENEFITS */
+
+.puppy-detail-top {
+  display: grid;
+  grid-template-columns: 1.35fr 0.95fr;
+  gap: 35px;
+  align-items: start;
+}
+
+.puppy-detail-right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  min-width: 0;
+}
+
+.puppy-detail-right .puppy-benefits {
+  width: calc(100% - 6px);
+  max-width: none;
+  margin: 0 3px;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: #fffaf2;
+  background-image:
+    radial-gradient(circle at 0 0, transparent 19px, #f1dfc9 20px, transparent 21px),
+    radial-gradient(circle at 20px 20px, transparent 19px, #f1dfc9 20px, transparent 21px);
+  background-size: 40px 40px;
+  border: 2px solid #493023;
+  border-radius: 20px;
+  box-shadow: 4px 5px 0 #321b101c;
+  transform: rotate(-1deg);
+}
+
+.puppy-detail-right .puppy-benefits .detail-step-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a84f20;
+  font-size: 15px;
+}
+
+.puppy-detail-right .puppy-benefits .detail-step-label span {
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #a84f20;
+  border-radius: 50%;
+}
+
+.puppy-detail-right .puppy-benefits h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 25px;
+  margin: 8px 0 16px;
+}
+
+.puppy-detail-right .puppy-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.puppy-detail-right .puppy-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.puppy-detail-right .puppy-benefits li svg {
+  color: #b85b24;
+  width: 18px;
+  height: 18px;
+  stroke-width: 3;
+  flex-shrink: 0;
+}
+
+/* COMING HOME FROM ABROAD */
+
+.puppy-journey {
+  padding: 45px 0;
+}
+
+.puppy-journey h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 900;
+  color: #301609;
+  margin: 10px 0 30px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .puppy-detail-top {
+    grid-template-columns: 1fr;
+  }
+
+  .puppy-detail-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .puppy-detail-right .puppy-benefits {
+    transform: rotate(-0.4deg);
+    padding: 20px;
+  }
+}
+
+/* Puppy image gallery */
+
+.puppy-gallery {
+  width: 100%;
+  min-width: 0;
+}
+
+.puppy-detail-photo {
+  position: relative;
+  height: 620px;
+  overflow: hidden;
+  border: 3px solid #321b10;
+  border-radius: 24px;
+  background: #e8d6bc;
+}
+
+.puppy-detail-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #321b10;
+  background: #fffaf3;
+  color: #321b10;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.gallery-prev {
+  left: 15px;
+}
+
+.gallery-next {
+  right: 15px;
+}
+
+.gallery-count {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #321b10;
+  color: white;
+  padding: 6px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.gallery-thumbnails img {
+  width: 78px;
+  height: 88px;
+  object-fit: cover;
+  border: 2px solid #b9aaa0;
+  border-radius: 13px;
+  cursor: pointer;
+}
+
+.gallery-thumbnails img.active {
+  border: 2px solid #a94b19;
+}
+
+/* Journey section below puppy image */
+.puppy-gallery-journey {
+  width: 100%;
+  margin-top: 35px;
+  padding: 20px 0 40px;
+}
+
+.puppy-gallery-journey .journey-steps {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .puppy-gallery-journey .journey-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FIX: Reduce gap before Coming Home section */
+
+/* =================================
+   COMING HOME FROM ABROAD
+================================= */
+
+.puppy-gallery-journey,
+.puppy-journey {
+  padding: 20px 0 45px !important;
+  margin-top: -15px !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.puppy-journey h2 {
+  font-family: "Fraunces", Georgia, serif !important;
+  font-size: clamp(36px, 4vw, 50px) !important;
+  font-weight: 900 !important;
+  line-height: 1.1;
+  color: #301609;
+  margin: 10px 0 30px !important;
+}
+
+/* Four points in one horizontal line */
+
+.puppy-gallery-journey .journey-steps,
+.puppy-journey .journey-steps {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  column-gap: 45px !important;
+  row-gap: 30px;
+  width: 100%;
+  margin-top: 30px !important;
+}
+
+/* Individual points */
+
+.journey-step {
+  position: relative;
+  min-width: 0;
+}
+
+/* Number circles */
+
+.journey-number {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #321b10;
+  border-radius: 50%;
+  background: #fffdf8;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* Paw connectors */
+
+.puppy-journey .journey-step:not(:last-child)::after {
+  content: "🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾";
+  position: absolute;
+  top: 8px;
+  left: 55px;
+  width: calc(100% + 5px);
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Point headings */
+
+.journey-step h3 {
+  font-family: "Fraunces", Georgia, serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  line-height: 1.3;
+  color: #321b10;
+  margin: 0 0 8px !important;
+}
+
+/* Descriptions */
+
+.journey-step p {
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+  color: #755b49;
+  margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .puppy-journey .journey-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 35px !important;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .puppy-journey .journey-steps {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .puppy-journey .journey-step::after {
+    display: none;
+  }
+}
+
+
+/* =====================================
+   UNIFIED NUMBERED STEP LABELS 1, 2, 3, 4
+===================================== */
+
+/* Numbered labels across the puppy detail page */
+.puppy-detail-page .detail-step-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a94b19;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Number circle */
+.puppy-detail-page .detail-step-label > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+  border-radius: 50%;
+  background: #a94b19;
+  color: #fffaf3;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* Breadcrumb button */
+.puppy-detail-page .puppy-breadcrumb button {
+  color: #a94b19;
+  background: transparent;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.puppy-detail-page .puppy-breadcrumb button:hover {
+  color: #67412f;
+  text-decoration: underline;
+}
+
+/* KENNEL DOOR OPENS INWARD ON HOVER */
+
+.kennel .door-single {
+  transform-origin: left center;
+  transform: rotateY(0deg);
+  transition: transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transform-style: preserve-3d;
+}
+
+/* Open the door inward */
+/* Door opens in the opposite direction */
+.kennel:hover .door-single {
+  transform: rotateY(110deg);
+  box-shadow: 5px 5px 15px rgba(48, 22, 9, 0.3);
+}
+
+/* Keep puppy visible behind the door */
+.kennel-inside {
+  z-index: 1;
+}
+
+/* Smoothly close when mouse leaves */
+.kennel .door-single {
+  backface-visibility: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+#happy-families,
+#faqs {
+  scroll-margin-top: 100px;
+}
+
+/* Wavy bottom edge of navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  isolation: isolate;
+  border-bottom: none;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  background: radial-gradient(
+    circle at 20px 0,
+    #fffdf8 19px,
+    transparent 20px
+  );
+  background-size: 36px 14px;
+  background-repeat: repeat-x;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 2px #30160925);
+}

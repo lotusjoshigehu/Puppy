@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&display=swap');
+
+.meet-ways-section {
+  --meet-ink: #35190d;
+  --meet-brown: #a94b19;
+  --meet-line: #b9915d;
+  width: 100%;
+  overflow: hidden;
+  color: var(--meet-ink);
+  background: linear-gradient(180deg, #ffe3ae 0%, #f8cf8c 100%);
+  font-family: "DM Sans", sans-serif;
+  padding: 48px 24px 56px;
+  box-sizing: border-box;
+}
+.meet-ways-inner {
+  position: relative;
+  max-width: 1120px;
+  min-height: 610px;
+  margin: 0 auto;
+}
+.meet-ways-section h2 {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--meet-ink);
+  font: 900 clamp(42px, 5vw, 68px)/.98 "Fraunces", Georgia, serif;
+  letter-spacing: -2.5px;
+}
+.meet-ways-sign {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: min(540px, 90%);
+  margin: 32px auto 0;
+  filter: drop-shadow(0 5px 0 rgba(80, 43, 18, .14));
+}
+.meet-sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  width: 50%;
+  border: 2px solid var(--meet-ink);
+  background: #e9a64f;
+  font: 800 clamp(15px, 2vw, 24px)/1 "Fraunces", Georgia, serif;
+  text-align: center;
+}
+.meet-sign-left { clip-path: polygon(12% 0,100% 0,100% 100%,12% 100%,0 50%); padding: 0 10px 0 24px; }
+.meet-sign-right { clip-path: polygon(0 0,88% 0,100% 50%,88% 100%,0 100%); padding: 0 24px 0 10px; }
+.meet-sign-post {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: -28px;
+  bottom: -390px;
+  width: 13px;
+  transform: translateX(-50%);
+  border: 2px solid var(--meet-ink);
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(90deg, #b66b2d, #e7a14d, #a85d28);
+  pointer-events: none;
+}
+.meet-ways-divider {
+  position: absolute;
+  left: 50%;
+  top: 185px;
+  bottom: 0;
+  width: 2px;
+  background: rgba(84, 49, 22, .2);
+}
+.meet-way {
+  position: absolute;
+  z-index: 2;
+  top: 245px;
+  width: 46%;
+  min-height: 330px;
+}
+.meet-way-local { left: 0; }
+.meet-way-imported { right: 0; }
+.local-city-art {
+  position: relative;
+  height: 230px;
+  border-bottom: 5px solid var(--meet-line);
+}
+.city-building {
+  position: absolute;
+  bottom: 0;
+  width: 38px;
+  border: 5px solid var(--meet-line);
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0;
+  opacity: .9;
+}
+.building-one { left: 5%; height: 72px; }
+.building-two { left: 14%; height: 108px; width: 27px; }
+.building-three { left: 32%; height: 188px; width: 22px; }
+.building-four { right: 19%; height: 65px; }
+.building-five { right: 6%; height: 118px; width: 28px; }
+.showroom-frame {
+  position: absolute;
+  z-index: 1;
+  left: 18%;
+  bottom: 17px;
+  width: 31%;
+  height: 190px;
+  padding: 7px;
+  border: 3px solid var(--meet-ink);
+  border-radius: 7px;
+  background: #fff1d9;
+  box-shadow: 0 4px 0 rgba(60, 30, 12, .15);
+}
+.showroom-frame img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 3px; }
+.showroom-awning {
+  position: absolute;
+  top: -17px;
+  left: -10px;
+  right: -10px;
+  height: 17px;
+  border: 2px solid var(--meet-ink);
+  border-radius: 5px 5px 0 0;
+  background: repeating-linear-gradient(90deg, #b95020 0 13px, #fff5e7 13px 26px);
+}
+.showroom-caption {
+  position: absolute;
+  left: 18%;
+  bottom: -23px;
+  width: 31%;
+  text-align: center;
+  font: 600 12px "Fraunces", Georgia, serif;
+}
+.meet-way-copy { max-width: 390px; margin: 26px 0 0 auto; text-align: right; }
+.meet-way-copy p { margin: 0 0 16px; color: #60452f; font-size: 14px; line-height: 1.6; }
+.meet-way-copy button {
+  border: 0;
+  border-radius: 30px;
+  padding: 13px 22px;
+  color: white;
+  background: var(--meet-brown);
+  box-shadow: 0 5px 0 #54240f;
+  font: 700 13px "DM Sans", sans-serif;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+.meet-way-copy button:hover { transform: translateY(2px); box-shadow: 0 3px 0 #54240f; }
+.meet-way-imported .meet-way-copy { margin: 8px 0 0 12%; text-align: left; }
+.flight-art { height: 205px; position: relative; }
+.flight-art svg { width: 100%; height: 100%; overflow: visible; }
+.flight-art svg > path { fill: none; stroke: #a94b19; stroke-width: 2.5; stroke-dasharray: 2 9; stroke-linecap: round; }
+.flight-art circle { fill: #a94b19; }
+.flight-art text { fill: #60452f; font: 14px "DM Sans", sans-serif; }
+.flight-plane path, .flight-plane rect { fill: #fffaf1; stroke: var(--meet-ink); stroke-width: 3; }
+.flight-plane circle { fill: #c7d2d1; stroke: #7c4c2c; stroke-width: 2; }
+.imported-puppy-preview { display: none; }
+.meet-ways-mascot {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+  font-size: 74px;
+  filter: drop-shadow(0 3px 0 rgba(70, 35, 10, .15));
+}
+@media (max-width: 760px) {
+  .meet-ways-section { padding: 38px 18px 50px; }
+  .meet-ways-inner { min-height: 0; }
+  .meet-ways-section h2 { font-size: clamp(39px, 10vw, 56px); }
+  .meet-ways-sign { margin-top: 25px; }
+  .meet-sign { min-height: 44px; font-size: 14px; }
+  .meet-sign-post, .meet-ways-divider { display: none; }
+  .meet-way { position: relative; top: auto; left: auto; right: auto; width: 100%; min-height: 0; margin-top: 45px; }
+  .local-city-art { max-width: 520px; margin: auto; height: 220px; }
+  .showroom-frame { left: 30%; width: 30%; }
+  .showroom-caption { left: 30%; width: 30%; }
+  .meet-way-copy, .meet-way-imported .meet-way-copy { max-width: 520px; margin: 25px auto 0; text-align: center; }
+  .flight-art { max-width: 500px; height: 190px; margin: auto; }
+  .meet-ways-mascot { display: none; }
+}
+@media (max-width: 420px) {
+  .meet-ways-sign { width: 100%; }
+  .meet-sign { font-size: 12px; padding-left: 16px; padding-right: 16px; }
+  .showroom-frame { left: 26%; width: 37%; }
+  .showroom-caption { left: 26%; width: 37%; }
+}

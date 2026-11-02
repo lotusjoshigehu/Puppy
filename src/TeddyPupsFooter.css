@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&display=swap');
+
+/* Main Footer */
+.teddypups-footer {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 215px 6% 14px;
+  overflow: hidden;
+  background: #241109 !important;
+  color: #f8eadb;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Decorative Stars - No Background Shape */
+.teddypups-footer::before {
+  content: "✦       ·          ✦              ·          ✦";
+  position: absolute;
+  z-index: -1;
+  top: 165px;
+  left: 6%;
+  right: 6%;
+  color: #c28a43;
+  font-size: 13px;
+  letter-spacing: 35px;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+/* Remove Unwanted After Decoration */
+.teddypups-footer::after {
+  content: none !important;
+  display: none !important;
+  background: transparent !important;
+}
+
+/* Moon */
+.teddypups-footer-moon {
+  position: absolute;
+  top: 155px;
+  right: 8%;
+  color: #ffe4a8;
+  font-size: 58px;
+  line-height: 1;
+}
+
+/* Main Three Columns */
+.teddypups-footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 0.65fr 0.9fr;
+  gap: 7%;
+  max-width: 1320px;
+  min-height: 385px;
+  margin: 0 auto;
+}
+
+/* Brand */
+.teddypups-footer-brand h2 {
+  margin: 0 0 14px;
+  color: #ffe2a8;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(36px, 4vw, 51px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+
+.teddypups-footer-brand p {
+  max-width: 360px;
+  margin: 0;
+  color: #e2d0c2;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Puppy Basket */
+.teddypups-footer-basket {
+  display: block;
+  width: 175px;
+  height: 175px;
+  margin-top: 48px;
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+/* Explore and Contact */
+.teddypups-footer-explore,
+.teddypups-footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  padding-top: 4px;
+}
+
+/* Column Headings */
+.teddypups-footer h3 {
+  margin: 0 0 4px;
+  color: #e5ad55;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* Links and Contact Text */
+.teddypups-footer-explore a,
+.teddypups-footer-contact a,
+.teddypups-footer-contact p {
+  margin: 0;
+  color: #eadfd6;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.teddypups-footer a {
+  transition: color 0.2s ease;
+}
+
+.teddypups-footer a:hover {
+  color: #ffc66f;
+}
+
+/* Social Buttons */
+.teddypups-footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 7px;
+}
+
+.teddypups-footer-socials a {
+  padding: 8px 13px;
+  border: 1px solid rgba(255, 244, 230, 0.55);
+  border-radius: 22px;
+  font-size: 11px;
+}
+
+/* Bottom Section */
+.teddypups-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 18px 3% 0;
+  border-top: 1px solid rgba(255, 244, 230, 0.17);
+}
+
+/* Copyright */
+.teddypups-footer-copyright {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d9c8bb;
+  font-size: 11px;
+}
+
+/* Logo */
+.teddypups-footer-logo {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff4e5;
+  color: #9b4b20;
+  font-size: 17px;
+}
+
+/* Tagline */
+.teddypups-footer-bottom strong {
+  color: #d69a43;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Tablet */
+@media (max-width: 760px) {
+  .teddypups-footer {
+    padding: 150px 22px 24px;
+  }
+
+  .teddypups-footer::before {
+    top: 100px;
+    letter-spacing: 18px;
+  }
+
+  .teddypups-footer-moon {
+    top: 90px;
+    right: 7%;
+    font-size: 43px;
+  }
+
+  .teddypups-footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 42px 25px;
+    min-height: auto;
+    padding-bottom: 45px;
+  }
+
+  .teddypups-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .teddypups-footer-basket {
+    width: 145px;
+    height: 145px;
+    margin-top: 30px;
+  }
+
+  .teddypups-footer-bottom {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 460px) {
+  .teddypups-footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .teddypups-footer-brand {
+    grid-column: auto;
+  }
+
+  .teddypups-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .teddypups-footer a {
+    transition: none;
+  }
+}
